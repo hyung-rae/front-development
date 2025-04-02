@@ -1,0 +1,54 @@
+a,
+.icon,
+.search-result-doc,
+.search-result-icon {
+    color: #8bc34a !important;
+}
+
+.search-input {
+    &:focus {
+        outline: 0;
+
+        +.search-label .search-icon {
+            color: #8bc34a !important;
+        }
+    }
+}
+
+#search-input:focus,
+#search-input:active {
+    .search-icon {
+        color: #8bc34a !important;
+    }
+}
+
+.side-bar {
+    background-color: #f8f8f8;
+
+    @media screen and (min-width: 50rem) {
+        width: 245px;
+        min-width: 0;
+    }
+}
+
+.side-bar+.main {
+    @media (min-width: 50rem) {
+        margin-left: 245px;
+    }
+}
+
+.site-footer {
+    display: none;
+}
+
+.nav-list .nav-list-item .nav-list-link:hover,
+.nav-list .nav-list-item .nav-list-link.active,
+.site-button:hover,
+.site-title:hover {
+    background-image: none;
+}
+
+.site-title {
+    @include fs-5;
+    font-weight: 600;
+}
