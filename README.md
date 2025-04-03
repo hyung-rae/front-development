@@ -1,7 +1,6 @@
 # [Front Development]
 
 <p>
-  <img src="https://img.shields.io/github/last-commit/hyung-rae/front-development" style="border-radius: 5px;">
   <img src="https://img.shields.io/badge/GitHub%20Page-181717?style=flat-square&logo=github&logoColor=white" 
        style="border-radius: 5px;">
 </p>
