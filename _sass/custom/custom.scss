@@ -5,6 +5,12 @@ a,
   color: #8bc34a !important;
 }
 
+.anchor-heading {
+  svg {
+    color: #8bc34a !important;
+  }
+}
+
 a:not([class]) {
   text-underline-offset: 4px;
 
@@ -71,4 +77,8 @@ a:not([class]) {
 
 .nav-list-item .active {
   color: #4caf50 !important;
+}
+
+.main {
+  max-width: none;
 }
