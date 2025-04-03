@@ -5,6 +5,14 @@ a,
   color: #8bc34a !important;
 }
 
+a:not([class]) {
+  text-underline-offset: 4px;
+
+  &:hover {
+    text-decoration-color: rgba(#8bc34a, 0.45);
+  }
+}
+
 .search-input {
   &:focus {
     outline: 0;
@@ -51,4 +59,16 @@ a,
 .site-title {
   @include fs-5;
   font-weight: 600;
+}
+
+.nav-list .nav-list-item .nav-list-expander {
+  color: #8bc34a !important;
+
+  &:hover {
+    background-image: none;
+  }
+}
+
+.nav-list-item .active {
+  color: #4caf50 !important;
 }
