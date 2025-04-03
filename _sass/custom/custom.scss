@@ -82,3 +82,10 @@ a:not([class]) {
 .main {
   max-width: none;
 }
+
+.search-result {
+  &:hover,
+  &.active {
+    background-color: #dcedc8;
+  }
+}
