@@ -10,7 +10,7 @@ nav_order: 1
   <img alt="Static Badge" src="https://img.shields.io/badge/Github--pages-deploy-brightgreen?style=flat&logo=github&logoColor=white&logoSize=auto&labelColor=%23181717">
 </p>
 
-<h1 style="color:#4caf50;font-weight:500;">"여기는 배운 것과 일한 것을 모두 적는 곳입니다."</h1>
+<h1 style="color:#4caf50;font-weight:500;">여기는 배운 것과 일한 것을 모두 적는 곳입니다.</h1>
 {: .mb-lg-4 }
 
 일단은 잊어버리면 손해기 때문에 다 적을 겁니다.  
