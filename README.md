@@ -1,8 +1,9 @@
 # [Front Development]
 
 <p>
-  <img src="https://img.shields.io/badge/GitHub%20Page-181717?style=flat-square&logo=github&logoColor=white" 
-       style="border-radius: 5px;">
+  <img alt="Static Badge" src="https://img.shields.io/badge/jekyll-v4.4.1-blue?style=flat&logo=jekyll&logoColor=%23CC0000&logoSize=auto">
+  <img alt="Static Badge" src="https://img.shields.io/badge/just--the--docs-v0.10.1-blue?style=flat">
+  <img alt="Static Badge" src="https://img.shields.io/badge/Github--pages-deploy-brightgreen?style=flat&logo=github&logoColor=white&logoSize=auto&labelColor=%23181717">
 </p>
 
 ## 목표
