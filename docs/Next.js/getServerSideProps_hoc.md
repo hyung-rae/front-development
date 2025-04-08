@@ -4,34 +4,33 @@ parent: Next.js
 nav_order: 2
 layout: default
 ---
+<p>
+    <img alt="Static Badge" src="https://img.shields.io/badge/Next.js-13.5.4-blue?logo=nextdotjs&logoColor=%23fff&logoSize=auto&labelColor=%23000000">
+</p>
 
 ### 관련문서 
 
 - [Next getServerSideProps]
 
-<p>
-    <img alt="Static Badge" src="https://img.shields.io/badge/Next.js-13.5.4-blue?logo=nextdotjs&logoColor=%23fff&logoSize=auto&labelColor=%23000000">
-</p>
 
 <h1 style="color:#4caf50;font-weight:500;">getServerSideProps with HOC</h1>
 
 프로젝트 특성상 각 페이지별 seo 최적화 및 페이지 랜더링 전 서버로 부터 필요한 data fetch 가 필요함  
 `getServerSideProps`로 각 페이지별 필요 데이터를 page props 전달 코드 존재   
 
-```js
+```jsx
 
 const Page = (props) => {
   return (
     <CommonSeo {...props}>
-      <Page
-        {...props}
-      />
+      <Page {...props} />
     </CommonSeo>
    )
 }
 
 export const getServerSideProps = async (context) => {
   /** 필요한 data fetch 하는 곳 */
+  /** 중복된 코드도 엄청 많음 */
   return { props }
 }
 
@@ -64,11 +63,11 @@ AWS 에서 변경된 416 코드를 받고 안내 페이지로 리다이렉트 �
     | 데이터 노출 가능성 | 클라이언트에서도 실행되므로 API 경로 노출 위험 | 서버에서만 실행되어 안전함 |
     | 권장 여부 | ❌ (구버전, 비추천) | ✅ (Next.js 권장 방식) |
 
-#### withServerSideProps
+### withServerSideProps
 
 `getServerSideProps`를 인자로 받아 각 페이지별 로직 + 공통 로직 실행하는 컴포넌트
 
-```js
+```jsx
 /** server side props 공통 */
 const withServerSideProps = (getServerSideProps) => {
   return async (context) => {
@@ -97,8 +96,8 @@ const withServerSideProps = (getServerSideProps) => {
 
 ```
 
-#### page 별 적용
-```js
+### page 별 적용
+```jsx
 const Home = (props) => {
   return (
     <CommonSeo {...props}>
@@ -112,8 +111,9 @@ export const getServerSideProps = withServerSideProps()
 export default Home
 ```
 
-- 페이지별 추가 로직이 필요한 경우
-```js
+### 페이지별 추가 로직이 필요한 경우
+  
+```jsx
 
 export const getServerSideProps = withServerSideProps(async (context: any) => {
   /** 추가 로직 후 props에 포함될 객체 리턴 */
