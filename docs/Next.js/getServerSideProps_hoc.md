@@ -1,5 +1,5 @@
 ---
-title: getServerSideProps with HOC
+title: withServerSideProps
 parent: Next.js
 nav_order: 2
 layout: default
