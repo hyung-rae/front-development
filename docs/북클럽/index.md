@@ -1,6 +1,6 @@
 ---
 title: 북 클럽
-nav_order: 6
+nav_order: 4
 layout: default
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 정보처리 기사
-nav_order: 5
+nav_order: 3
 layout: default
 ---
 
