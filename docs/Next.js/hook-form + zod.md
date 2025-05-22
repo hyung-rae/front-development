@@ -1,5 +1,5 @@
 ---
-title: react hook form + zod
+title: hook form + zod
 parent: Next.js
 nav_order: 3
 layout: default
@@ -15,7 +15,7 @@ layout: default
 
 - [zod docs]
 
-<h1 style="color:#4caf50;font-weight:500;">react hook form + zod</h1>
+<h1 style="color:#0c0c0c;font-weight:500;">react hook form + zod</h1>
 
 서버와 data를 주고받는게 대부분인 작업에서   
 가장 빈번하고 중요한 작업 중 하나가 request에 실려가는 값들의 유효성 검사다.   
@@ -40,6 +40,26 @@ layout: default
         - ...
 ```
 
+### component.jsx
+
+- `custom hook` 에서 가져온 `form` 을 기반으로 필드 데이터 구성
+
+```jsx
+import { FormProvider } from 'react-hook-form'
+
+const Component = () => {
+
+    const {form, handleSubmit} = useCustomForm()
+    ...
+
+    return (
+        <FormProvider {...form}>
+            {/* fields UI ... */}
+        </FormProvider>
+    )
+}
+```
+
 ### useFrom.js (custom hook)
 
 - `react hook form` 의 `useForm.js` 훅을 바탕으로 이루어진 커스텀 훅
@@ -48,13 +68,51 @@ layout: default
 - `useForm.js` 훅을 바탕으로 작업하기 때문에 `FormProvider` 즉 form 내부에서만 사용되어야 한다.
 
 ```js
-const useCustomForm = () => {
-    
-}
+import { initValues, schema } from '../_schema'
 
+const useCustomForm = () => {
+    const form = useForm({ mode: 'onChange', defaultValues: initValues, resolver: zodResolver(schema) })
+    
+    const { data } = useQuery('query-key', getApi)
+    const { mutate: update, isLoading: updateLoading } = useMutation(postApi, {
+        onSuccess: () => {},
+    })
+
+    const onSubmit = data => {
+        update(data)
+    }
+
+    useEffect(() => {
+        if (data) {
+            form.reset({ ...initValues, ...data })
+        }
+    }, [data])
+
+    return {
+        form,
+        handleSubmit: form.handleSubmit(onSubmit)
+    }
+}
 ```
 
-... 작성중
+### schema.js
+
+- 필드 초기값과 각 필드값의 유효성 정의 (zod)
+- 필요에 따라 정규식 패턴 + 유효성검증 callback 함수 정의
+
+```js
+import z from 'zod'
+
+const initValues ={
+    /** fields... */
+}
+
+const schema = z.object({
+    key : z.string().trim()
+    key2 : z.boolean()
+    ...
+})
+```
 
 [zod docs]: https://v3.zod.dev/
 [resolver]: https://react-hook-form.com/docs/useform#resolver

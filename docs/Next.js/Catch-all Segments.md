@@ -15,7 +15,7 @@ layout: default
 
 - [Next rouing]
 
-<h1 style="color:#4caf50;font-weight:500;">Catch-all Segments</h1>
+<h1 style="color:#0c0c0c;font-weight:500;">Catch-all Segments</h1>
 
 관리자 페이지에서 가장 흔한 요청사항   
 리스트 페이지에서 검색 필터를 유지 시키는 것 (새로고침 + 뒤로기가기 등)  

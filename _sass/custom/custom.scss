@@ -2,12 +2,12 @@ a,
 .icon,
 .search-result-doc,
 .search-result-icon {
-  color: #8bc34a !important;
+  color: #7f7f7f !important;
 }
 
 .anchor-heading {
   svg {
-    color: #8bc34a !important;
+    color: #7f7f7f !important;
   }
 }
 
@@ -15,7 +15,7 @@ a:not([class]) {
   text-underline-offset: 4px;
 
   &:hover {
-    text-decoration-color: rgba(#8bc34a, 0.45);
+    text-decoration-color: rgba(#7f7f7f, 0.45);
   }
 }
 
@@ -24,7 +24,7 @@ a:not([class]) {
     outline: 0;
 
     + .search-label .search-icon {
-      color: #8bc34a !important;
+      color: #7f7f7f !important;
     }
   }
 }
@@ -32,7 +32,7 @@ a:not([class]) {
 #search-input:focus,
 #search-input:active {
   .search-icon {
-    color: #8bc34a !important;
+    color: #7f7f7f !important;
   }
 }
 
@@ -68,7 +68,7 @@ a:not([class]) {
 }
 
 .nav-list .nav-list-item .nav-list-expander {
-  color: #8bc34a !important;
+  color: #7f7f7f !important;
 
   &:hover {
     background-image: none;
@@ -76,7 +76,7 @@ a:not([class]) {
 }
 
 .nav-list-item .active {
-  color: #4caf50 !important;
+  color: #161717 !important;
 }
 
 .main {
@@ -86,6 +86,6 @@ a:not([class]) {
 .search-result {
   &:hover,
   &.active {
-    background-color: #dcedc8;
+    background-color: #e5e5e5;
   }
 }

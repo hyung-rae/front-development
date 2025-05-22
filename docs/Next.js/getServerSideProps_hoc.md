@@ -13,7 +13,7 @@ layout: default
 - [Next getServerSideProps]
 
 
-<h1 style="color:#4caf50;font-weight:500;">getServerSideProps with HOC</h1>
+<h1 style="color:#0c0c0c;font-weight:500;">getServerSideProps with HOC</h1>
 
 프로젝트 특성상 각 페이지별 seo 최적화 및 페이지 랜더링 전 서버로 부터 필요한 data fetch 가 필요함  
 `getServerSideProps`로 각 페이지별 필요 데이터를 page props 전달 코드 존재   
