@@ -13,3 +13,17 @@
 - 깔끔하고 직관적인 개발 노트 만들기
 
 [Front Development]: https://hyung-rae.github.io/front-development/
+
+### Local Start Guide
+**gem 설치**
+
+```bash
+bundle install
+```
+**Jekyll 개발 서버 실행**
+
+```bash
+bundle exec jekyll serve
+```
+💡 기본 포트는 http://localhost:4000
+
