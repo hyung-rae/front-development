@@ -1,7 +1,7 @@
 ---
 title: hook form + zod
-parent: Next.js
-nav_order: 3
+parent: React.js
+nav_order: 2
 layout: default
 ---
 
