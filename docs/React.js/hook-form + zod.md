@@ -8,7 +8,6 @@ layout: default
 <p>
     <img alt="Static Badge" src="https://img.shields.io/badge/react--hook--form-7.43.9-%23EC5990?logo=reacthookform&logoColor=%23fff&labelColor=%23EC5990">
     <img alt="Static Badge" src="https://img.shields.io/badge/v3-%233E67B1?logo=zod&logoColor=%23fff&label=zod&labelColor=%233E67B1">
-
 </p>
 
 ### 관련문서
