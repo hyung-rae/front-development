@@ -83,6 +83,10 @@ a:not([class]) {
   max-width: none;
 }
 
+.main-content-wrap {
+  max-width: 1000px;
+}
+
 .search-result {
   &:hover,
   &.active {
